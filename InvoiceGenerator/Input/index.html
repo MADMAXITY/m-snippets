@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Invoice</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <style>
+        .headerContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .header {
+            font-family: "Roboto";
+            font-weight: 500;
+            font-size: 5rem;
+            letter-spacing: 6px;
+            color: #333333;
+        }
+        .invoiceText {
+            font-family: "Roboto";
+            font-weight: 400;
+            font-size: 3rem;
+            color: #333333;
+        }
+        .firstAddressDetail {
+            margin-top: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .soldByContainer.div {
+            text-align: left;
+        }
+        .shipindAdContainer.div {
+            text-align: right;
+            font-family: "Roboto";
+            font-size: 1.5rem;
+            font-weight: 500;
+            letter-spacing: 3px;
+        }
+        .soldby,
+        .shipingAd,
+        .billto {
+            font-family: "Roboto";
+            font-size: 2rem;
+            font-weight: 500;
+            color: #333333;
+            letter-spacing: 3px;
+            border-bottom: 1px solid #333333;
+        }
+        .name,
+        .lineOne,
+        .linetwo,
+        .area,
+        .CitySP,
+        .orderdet {
+            font-family: "Roboto";
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: #333333;
+            letter-spacing: 2px;
+        }
+        .secondLineContainer {
+            margin-top: 5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .billingAddressContainer.div {
+            text-align: left;
+        }
+
+        .tableContainer {
+            margin-top: 3rem;
+            width: 97%;
+        }
+        table,
+        th {
+            border: 1px solid black;
+            outline: none;
+            border-collapse: collapse;
+            font-family: "Roboto";
+            font-size: 1rem;
+            font-weight: 400;
+            color: #333333;
+        }
+        th {
+            font-weight: 500;
+        }
+        td {
+            border-left: 1px solid black;
+            border-right: 1px solid black;
+            border-collapse: collapse;
+        }
+        .totalContainer {
+            margin-top: 7rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        .totalText,
+        .totalPrice,
+        .amountInWords,
+        .wordAmount {
+            font-family: "Roboto";
+            font-size: 2rem;
+            font-weight: 500;
+            color: #333333;
+        }
+        .signature {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .signatureText {
+            font-family: "Roboto";
+            font-size: 1rem;
+            font-weight: 500;
+            color: #333333;
+        }
+        .footerText {
+            margin-top: 7rem;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            font-family: "Roboto";
+            font-size: 1rem;
+            font-weight: 400;
+            color: #333333;
+        }
+    </style>
+    <body>
+        <div class="headerContainer">
+            <div class="header">Refrit</div>
+
+            <div class="invoiceText">Invoice of Order</div>
+        </div>
+        <div class="secondLineContainer">
+            <div class="billingAddressContainer">
+                <div class="billto">Bill to:</div>
+                <div class="name">Name</div>
+                <div class="lineOne">Address Line One</div>
+                <div class="linetwo">Address Line Two</div>
+                <div class="area">Area</div>
+                <div class="CitySP">City State Pincode</div>
+            </div>
+            <div class="orderDetailsContainer">
+                <div class="orderdet">
+                    <span style="font-weight: 500">Invoice Number :</span>
+                    Number
+                </div>
+                <div class="orderdet">
+                    <span style="font-weight: 500">Invoice Date : </span>Date
+                </div>
+                <div class="orderdet">
+                    <span style="font-weight: 500">Order Number : </span>Number
+                </div>
+                <div class="orderdet">
+                    <span style="font-weight: 500">Order Date : </span>Date
+                </div>
+            </div>
+        </div>
+        <div class="firstAddressDetail">
+            <div class="soldByContainer">
+                <div class="soldby">Sold By:</div>
+                <div class="name">Name</div>
+                <div class="lineOne">Address Line One</div>
+                <div class="linetwo">Address Line Two</div>
+                <div class="area">Area</div>
+                <div class="CitySP">City State Pincode</div>
+            </div>
+            <div class="shipindAdContainer">
+                <div class="shipingAd">Shiping Address:</div>
+                <div class="name">Name</div>
+                <div class="lineOne">Address Line One</div>
+                <div class="linetwo">Address Line Two</div>
+                <div class="area">Area</div>
+                <div class="CitySP">City State Pincode</div>
+            </div>
+        </div>
+        <div class="tableContainer">
+            <table style="width: 100%" align="center">
+                <tr>
+                    <th>Sr. No.</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Discount</th>
+                    <th>Quantity</th>
+                    <th>Net Amount</th>
+                    <th>Tax Rate</th>
+                    <th>Tax Type</th>
+                    <th>Tax Amount</th>
+                    <th>Total Amount</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>
+                        This is a product that we sell on our website and it is
+                        a good product.
+                    </td>
+                    <td>1 Million berries</td>
+                    <td>0 Berries</td>
+                    <td>1</td>
+                    <td>800000</td>
+                    <td>10%</td>
+                    <td>GST</td>
+                    <td>10%</td>
+                    <td>1 Million Berries</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>10%</td>
+                    <td>GST</td>
+                    <td>10%</td>
+                    <td>333</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>10%</td>
+                    <td>BST</td>
+                    <td>2%</td>
+                    <td>8000</td>
+                </tr>
+            </table>
+            <div class="totalContainer">
+                <div class="totalText">Total :</div>
+                <div class="totalPrice">2 Million Berries</div>
+            </div>
+            <div class="amountInWords">Amount in Words :</div>
+            <div class="wordAmount">One Million Berries</div>
+            <div class="signature">
+                <div class="signatureText">Authorized Signature</div>
+            </div>
+        </div>
+        <div class="footerText">
+            This Invoice has been generated Automatically and it is authorized
+            by refrit
+        </div>
+    </body>
+</html>
